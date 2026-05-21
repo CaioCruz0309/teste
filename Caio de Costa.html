@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Caos Positivo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #9ecefa);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #4a90e2;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            font-style: italic;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #357abd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Sorte do Dia 🎲</h1>
+        <p id="frase">Clique no botão para descobrir o seu destino...</p>
+        <button onclick="gerarFrase()">Mudar o Destino</button>
+    </div>
+
+    <script>
+        const frases = [
+            "Seja a mudança que você deseja ver no mundo. Ou apenas tome um café.",
+            "Grandes coisas estão por vir, desde que você levante do sofá.",
+            "Sua internet estará rápida e seu código não terá bugs hoje (esperamos).",
+            "Errar é humano. Culpar o corretor ortográfico é mais humano ainda.",
+            "Tudo que você precisa é amor. E um pouco de chocolate.",
+            "A persistência realiza o impossível. Menos fechar a gaveta cheia de fios."
+        ];
+
+        function gerarFrase() {
+            const indiceAleatorio = Math.floor(Math.random() * frases.length);
+            document.getElementById('frase').innerText = frases[indiceAleatorio];
+        }
+    </script>
+
+</body>
+</html>
